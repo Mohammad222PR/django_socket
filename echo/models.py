@@ -3,9 +3,9 @@ from django.db import models
 import re
 
 def validate_phone_number(value):
-    pattern = r'^\+98912\d{7}$'
+    pattern = r'^\+989\d{9}$'
     if not re.match(pattern, value):
-        raise ValidationError('شماره تلفن همراه باید با فرمت +98912xxxxxxx باشد')
+        raise ValidationError('شماره تلفن همراه باید با فرمت +989باشد')
 
 def validate_national_code(value):
     pattern = r'^\d{10}$'
